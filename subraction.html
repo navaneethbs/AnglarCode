@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>december assignment for button fuction</h1>
+        <button onclick="subtraction(8,6)">sub</button>
+        <label>result of 8 and 6 :<span id="first"></span></label>
+        <br></br>
+        <button onclick="addition(8,6)">add</button>
+        <label>result of 8 and 6 :<span id="second"></span></label> 
+        <br></br>  
+       <button onclick="Multiplication(8,6)">multiple</button>
+        <label>result of 8 and 6 :<span id="third"></span></label> 
+        <br></br>
+        <button onclick="division(10,2)">division</button>
+        <label>result of 10 and 2 :<span id="fourth"></span></label>   
+        <script>
+           function subtraction(a,b)
+           {
+               var result= a - b;
+               document.getElementById("first").innerHTML = result;
+           }
+           function addition(a,b)
+           {
+               var result= a + b;
+               document.getElementById("second").innerHTML = result;
+           }
+           function Multiplication(a,b)
+           {
+               var result= a * b;
+               document.getElementById("third").innerHTML = result;
+           }
+           function division(a,b)
+           {
+               var result= a / b;
+               document.getElementById("fourth").innerHTML = result;
+           }
+        </script>
+        <p id ="first"></p>
+        <p id ="second"></p>
+        <p id ="third"></p>
+        <p id ="fourth"></p>
+    </body>
+</html>
