@@ -1,32 +1,21 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <h1>fibonacci series</h1>
-    </head>
- <script type="text/javascript">
- function checkprimenumber(n){
-    for (c=2; c<=n - 1; c++){
-      if ( n%c == 0 ){
-        return false;
-      }
-      return true;
-   }
-}
+   <head>
+      <h1>Prime Numbers from 1 - 100</h1>
+   </head>
 
-function printprimenumber(number){
-    if(checkprimenumber(number) == true){
-       document.write(number+" is Prime Number <br />");   }
-}
-
-function printnumbers(range){
-    for (i=1; i<=range; i++){
-       printprimenumber(i);
-   }
-}
-
-var maxnumber = 98;
-printnumbers(maxnumber);
-
-</script>
-    
-    </html>
+   <body>
+      <script>
+         for (var j = 1; j <= 100; j++) {
+            var a = false;
+            for (var i = 2; i <= j; i++) {
+               if (j%i===0 && i!==j) {
+                  a = true;
+               }
+            }
+            if (a === false) {
+               document.write("<br>"+j);
+            }
+         }
+      </script>
+   </body>
+</html>
