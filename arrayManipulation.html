@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Array Manipulation</h2>
+
+<script>
+var inputArray = [];
+var finalArray = [];
+
+for(var i=0; i<10; i++) {
+	
+	inputArray[i] = prompt('Enter Element ' + (i+1));
+}
+
+document.write("The entered array is " + inputArray);
+document.write("<br>");
+document.write("<br>");
+
+var removeNumber = prompt('Enter element to remove');
+
+const index = inputArray.indexOf(removeNumber);
+if (index > -1) {
+  inputArray.splice(index, 1);
+}
+
+document.write("Array after deleting the element " + removeNumber + "   is " + inputArray);
+document.write("<br>");
+document.write("<br>");
+
+var insertId = prompt('Enter position to add');
+
+var insertNumber = prompt('Enter number to add');
+
+inputArray.splice(insertId, 0, insertNumber);
+
+document.write("Array after inserting the element " + insertNumber + " in position " + insertId + " is " + inputArray);
+document.write("<br>");
+document.write("<br>");
+
+var readId = prompt('Enter position to read');
+
+var readValue = inputArray[readId];
+
+document.write("The element in the position " + readId + " is " + readValue);
+document.write("<br>");
+document.write("<br>");
+
+finalArray = inputArray;
+finalArray.sort(function(a, b) {
+  return a - b;
+});
+
+document.write("Ascending order sort of the array " + finalArray);
+document.write("<br>");
+document.write("<br>");
+
+finalArray.reverse();
+
+document.write("Decending order sort of the array " + finalArray);
+document.write("<br>");
+document.write("<br>");
+</script>
+
+</body>
+</html>
+
